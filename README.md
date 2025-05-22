@@ -6,11 +6,12 @@
 - html파일작성
 - README파일, .gitignore파일작성
 - 터미널(git bash) 열기
-    :one: `git init` : 초기화, 레포지토리연결
-    :two: `git add .` : 모든파일 스테이징하기
-    :three: `git commit -m "커밋메시지"` : 파일 commit
-    :four: `git remote add origin 깃허브주소` 
-    :five: `git push origin main`
+
+    1. `git init` : 초기화, 레포지토리연결
+    2. `git add .` : 모든파일 스테이징하기
+    3. `git commit -m "커밋메시지"` : 파일 commit
+    4. `git remote add origin 깃허브주소` 
+    5. `git push origin main`
 
 ---
 **CLI git 명령어**
