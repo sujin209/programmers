@@ -7,11 +7,11 @@
 - README파일, .gitignore파일작성
 - 터미널(git bash) 열기
 
-    >`git init` : 초기화, 레포지토리연결
-     `git add .` : 모든파일 스테이징하기
-     `git commit -m "커밋메시지"` : 파일 commit
-     `git remote add origin 깃허브주소` 
-     `git push origin main`
+    >`git init` : 초기화, 레포지토리연결     
+    > `git add .` : 모든파일 스테이징하기     
+    > `git commit -m "커밋메시지"` : 파일 commit     
+    > `git remote add origin 깃허브주소`      
+    > `git push origin main`     
 
 ---
 **CLI git 명령어**
