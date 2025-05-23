@@ -1,0 +1,18 @@
+p{
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+}
+#box{
+    background-color: dodgerblue;
+}
+.box{
+    background-color: orange;
+}
+p[name="tiger"]{background-color: lightgoldenrodyellow;}
+
+#box:hover{
+    background-color: darkblue;
+    transition: all 1s;
+    transform : translateX(40px) rotate(180deg)
+}
