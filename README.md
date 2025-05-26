@@ -44,7 +44,7 @@
 ---
 ## HTML문법
 ### 🏷️기본태그
-- h1>h2>h3>h4>h5>h6 : 제목태그
+- h1 > h2 > h3 > h4 > h5 > h6 : 제목태그
 - p : 문단태그
     - lorem : 의미없는 문장 생성
 - a : 링크
@@ -126,6 +126,105 @@
 
 우선순위 : 점수기준, 점수 같으면 cascading
 
+### 🪢상속&역상속
+- 상위요소 - 부모 - 자식 - 하위요소
+- 부모 > 자식 : 상속
+    - font-style(서체, 글자크기, 자간, 행간 등) 물려줌
+- 자식 > 부모 : 역상속
+    - height(높이)
+    - 부모요소의 높이(css로 지정) < 자식요소의 높이인 경우 
+        - 레이아웃깨짐
+- 우선순위 : 자식 >>> 부모
 ---
 ### 20250523(금) [과제](https://github.com/sujin209/programmers)
 ---
+### ⚒️ 선택자조합
+- 띄어쓰기O  (조건1 조건2)
+    - 조건1에 해당하는 항목 중 조건2에 해당하는 항목
+    -  ex. `.list .menu`
+        ```
+        <div class="list">
+            <div class="menu"></div>
+        </div>
+- 띄어쓰기X  (조건1조건2)
+    - 조건1, 조건2에 모두 해당하는 항목
+    -  ex. `.list.menu`
+
+        ```
+        <div class="list menu"></div>
+- 친자식선택자 (조건1>조건2)
+    - 조건1에 해당하는 요소의 친자식 중 조건2에 부합하는 요소
+- 다중선택자( , )
+    - , 로 선택하고싶은 조건 나열
+- 단일대상선택자(클래스/아이디작성x)
+    - n번째속성선택 = 조건:nth-child()
+        - n번째 : n
+        - 홀짝 : odd/even
+        - k의배수번째 : kn
+    - 마지막자식선택 = 조건:last-child
+    - 첫번째자식선택 = 조건:first-child
+### 🕸️ CSS Nesting
+- 조건1 안에 조건1과의 선택자조합을 다 작성하는 방법 
+- 취향차이라서 편한대로 작성가능
+### 🥇선택자우선순위
+- 하위속성이 많을수록 우선적용
+1️⃣ .header > .inner > ul > .list
+### 📦 박스모델링
+- margin : 컨텐츠밀기
+    - auto = 자동설정(좌우방향 모두 auto면 가운데정렬)
+    - margin-inline = x축방향
+    - margin-block = y축방향
+- padding : 컨텐츠 전체 크기 증가(살찌는것처럼)
+- border : 테두리
+    - box_size = border-box 속성 지정하면 border 설정해도 box 크기 그대로
+컨텐츠 > padding > border > margin 순서
+### 🔧 CSS속성
+- color 색상
+- font-size 글자크기
+- font-family 폰트
+- font-weight 굵기
+- line-height 행간
+- letter-spacing 자간
+- background 관련
+    - background-attatchment, background-clip, background-color, background-image, background-origin, background-position, background-repeat, background-size
+### 🔧 float 속성
+- 사용목적 : 컨텐츠 가로 배치, 층수구별
+- **모든컨텐츠는 1층에서 시작, float속성 주면 2층으로 이동**
+    - *float 사용해도 text 위층으로 올라가지 않고 신문처럼 구성됨*
+    - ex. container > div 3개
+        - div 3개를 다 float하면 container 크기 0 -> **높이상속은 1층에 있을 때만 가능**
+         1️⃣ container에 높이 강제부여
+         2️⃣ container에 overflow : hidden 속성부여<br> &nbsp;&nbsp; - 자식요소가 부모컨테이너 밖으로 나갈 수 없음
+         3️⃣container 안에 p태그 만들고 clear : both 속성부여<br> 
+### 🚩position**
+|구분|relative|absolute|fixed|
+|---|---|---|---|
+|층수|1층|2층|2층|
+|기준점|자신|부모(position O)|브라우저
+|가운데정렬|margin : 0 auto|공식|공식|
+|사용예시|기준점을 잡아주기 위해|독립적요소|화면고정|
+|필수입력값|없음|x축, y축|x축, y축|
+- relative : 상하/좌우에서 값 1개씩만 지정가능
+- absolute의 기준이 되는 position : 보통 relative로 설정(1층이라서)
+- 가운데정렬 
+    ```
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate:-50% -50%;
+- sticky 
+    - 부모요소 끝날때까지 위치고정
+    - 부모요소에 GPU사용속성 있는 경우/스크롤 커스텀 시 동작x
+### 🔩flexbox**
+---
+### 🗣️ 프로그램용어
+- `*` 아스테리스크
+- `-` 하이픈
+- `_` 언더스코어
+- `__` 언더
+- `&` 엔퍼센드
+### ✍️네이밍규칙
+- kebab-case : ease-in-out-bounce
+- snake_case : ease_in_out_bounce
+- camelCase : easeInOutBounce
+- PascalCase : EaseInOutBounce

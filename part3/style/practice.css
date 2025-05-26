@@ -1,0 +1,19 @@
+nav li:last-child a{
+    color : orangered
+}
+main{
+    background-color: gray;
+}
+main .box1{
+    background-color: yellow;
+    border: 1px solid blue;
+}
+main ul li:nth-child(2){
+    font-size: 20px; /*16px이 기본사이즈*/
+}
+main ul li:nth-child(3){
+    text-decoration: underline;
+}
+footer p:hover{
+    color: red;
+}

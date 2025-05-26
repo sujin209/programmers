@@ -1,0 +1,19 @@
+.container{
+    background-color: lightpink;
+}
+.container  > div{
+    width: 200px;
+    height: 200px;
+}
+.container .box01{
+    background-color: dodgerblue;
+    float: left; 
+}
+.container .box02{
+    background-color: lightgoldenrodyellow;
+    float:left;
+}
+.container .box03{
+    background-color: lightsalmon;
+    float: left;
+}

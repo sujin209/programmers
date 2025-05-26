@@ -1,0 +1,32 @@
+.container{
+    background-color: lightpink;
+}
+.box01{
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+}
+.box02{
+    width: 200px;
+    height: 200px;
+    background-color: lightgoldenrodyellow;
+}
+.list{
+    background-color: lightpink;
+}
+/*list 안에 있는 li만*/
+.list li{
+    background-color: lightcyan;
+}
+/*list 안에 있는 모든 menu만*/
+/*.list .menu{
+    background-color: lightgoldenrodyellow;
+}
+
+/*list 안에 있는 친자식 menu만 - 친자식선택자*/
+.list > .menu{
+    background-color: lightgoldenrodyellow;
+}
+.list > li:nth-child(3){
+    background-color: lightgray;
+}

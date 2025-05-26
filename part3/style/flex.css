@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /*높이 안 주면 세로방향정렬 안됨 -> body의 크기 = container의 크기*/
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row; /*방향 = main축, 나머지 = sub축*/
+    justify-content: space-between; /*main축 정렬*/
+    align-items: center; /*sub축 정렬*/
+    gap : 10px;/*gap : 축 상관없이 간격 띄우기*/
+    flex-wrap: wrap; /*공간부족해지면 컨텐츠 줄이지 말고 다른줄로 넘어가기*/
+    align-content: space-between;/*wrap을 사용했을 때 컨텐츠끼리의 정렬*/
+
+    >div{
+        width: 150px;
+        height: 150px;
+        background-color: dodgerblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

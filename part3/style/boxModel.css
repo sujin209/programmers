@@ -1,0 +1,26 @@
+div{
+    width: 200px;
+    height: 200px;
+}
+.box01{
+    background-color : lightblue;
+    /*margin : 컨텐츠크기그대로, 공간넓어짐*/
+    margin: 10px; /*margin 모든방향에서 10px (top-right-bottom-left /  상하-좌우)*/
+    /*auto로 줄 수도 있음 , 좌우로 auto 주면 가운데정렬 -> 컨텐츠가 1층에 있을 때만 사용가능(**position=absolute, float=left)*/
+
+}
+.box02{
+    background-color : lightgoldenrodyellow;
+    /*padding : 컨텐츠크기 커지는만큼 공간넓어짐 -> 살찌는거*/
+    padding: 10px; /*padding 모든방향에서 10px (top-right-bottom-left /  상하-좌우)*/
+}
+.box03{
+    background-color : lightpink;
+    /*border : 테두리*/
+    border: 10px solid red; /*border-redus 둥글게만들어주는거 -> 다 다르게줘도됨(왼쪽위-오른쪽위-오른쪽아래-왼쪽아래), 50%주면 원*/
+    /*컨텐츠 - padding - border - margin*/
+}
+.box04{
+    background-color : lightcyan;
+    border: 5px solid black; /*테두리는 border+컨텐츠크기 -> box_sizing : border-box하면 크기고정가능*/
+}
